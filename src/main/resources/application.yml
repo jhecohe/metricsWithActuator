@@ -1,0 +1,16 @@
+management:
+  endpoints:
+    web:
+      exposure:
+#        Add all the possibles endpoints
+#        include: "*"
+        include: "health, beans, metrics, loggers"
+        exclude: "env"
+#      Change the default path endpoint of the management endpoint
+#      base-path: "/management-dashboard"
+  endpoint:
+    health:
+      show-details: always
+    loggers:
+      show-details: always
+
